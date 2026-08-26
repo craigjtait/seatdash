@@ -1,0 +1,20 @@
+{
+  "name": "seatdash",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "dev:api": "npm run dev -w @seatdash/api",
+    "dev:web": "npm run dev -w @seatdash/web",
+    "build": "npm run build --workspaces --if-present",
+    "db:generate": "npm run generate -w @seatdash/db",
+    "db:migrate": "npm run migrate -w @seatdash/db",
+    "db:seed": "npm run seed -w @seatdash/db"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
